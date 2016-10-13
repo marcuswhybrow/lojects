@@ -1,6 +1,6 @@
 {
   "name": "lojects",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "business logic objects",
   "author": "Marcus Whybrow",
   "license": "MIT",
@@ -9,6 +9,7 @@
   "bugs": {
     "url": "https://github.com/marcuswhybrow/lojects/issues"
   },
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcuswhybrow/lojects"
