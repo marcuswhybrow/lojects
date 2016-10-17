@@ -1,5 +1,9 @@
 import { isSubset } from './utils';
 
+function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 export default class Manager {
   constructor(params) {
     this.name = params.name;
@@ -7,9 +11,8 @@ export default class Manager {
     this.recordClass = params.record;
     this.integration = {
       type: params.integration.type,
-      context: params.integration.type.defaultContext,
+      context: clone(params.integration.type.defaultContext)
     };
-
     this.integration.context['manager'] = this;
     Object.keys(params.integration.context).forEach(key => {
       this.integration.context[key] = params.integration.context[key];
