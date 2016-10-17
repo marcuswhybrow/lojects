@@ -4,12 +4,11 @@
   "description": "business logic objects",
   "author": "Marcus Whybrow",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "homepage": "https://github.com/marcuswhybrow/lojects",
   "bugs": {
     "url": "https://github.com/marcuswhybrow/lojects/issues"
   },
-  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcuswhybrow/lojects"
@@ -23,13 +22,19 @@
     "esversion": 6
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "dynamodb-data-types": "^3.0.0"
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
-    "babel-preset-es2015": "^6.16.0"
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0"
   }
 }
