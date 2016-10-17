@@ -33,8 +33,8 @@ export default class Manager {
     }
     const callIntegration = integrationParams => {
       // Enforces data integrity
-      if (!isSubset(integrationParams, record)) {
-        throw new Error(
+      if (!isSubset(integrationParams, this.record)) {
+        return Promise.reject(
           `${this.name}: Integration parameters for "${actionName}" must be a `
           `subset of this.record`
         );

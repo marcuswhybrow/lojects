@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "aws-sdk": "^2.6.9",
     "dynamodb-data-types": "^3.0.0"
   },
   "devDependencies": {
