@@ -35,8 +35,8 @@ export default class Manager {
       // Enforces data integrity
       if (!isSubset(integrationParams, this.record)) {
         return Promise.reject(
-          `${this.name}: Integration parameters for "${actionName}" must be a `
-          `subset of this.record`
+          `${this.name}: Integration parameters for "${actionName}" must be ` +
+          `a subset of this.record`
         );
       }
       return this.integration.type.action(
