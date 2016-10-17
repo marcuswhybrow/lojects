@@ -1,5 +1,5 @@
 import AWS from 'aws-sdk';
-import { Integration } from '..';
+import { Integration } from '../integration';
 import { AttributeValue as attr } from 'dynamodb-data-types';
 
 const dynamodb = new AWS.DynamoDB();
