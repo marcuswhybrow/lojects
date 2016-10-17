@@ -10,6 +10,7 @@ export default class Manager {
       context: params.integration.type.defaultContext,
     };
 
+    this.integration.type.context['manager'] = this;
     Object.keys(params.integration.context).forEach(key => {
       this.integration.context[key] = params.integration.context[key];
     });
