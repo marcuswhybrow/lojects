@@ -4,7 +4,7 @@ export default class Manager {
   constructor(params) {
     this.name = params.name;
     this.actions = params.actions;
-    this.record = params.record;
+    this.recordClass = params.record;
     this.integration = {
       type: params.integration.type,
       context: params.integration.type.defaultContext,
@@ -36,7 +36,8 @@ export default class Manager {
     }
     const callIntegration = integrationParams => {
       // Enforces data integrity
-      if (!isSubset(integrationParams, this.record)) {
+      const defaultRecord = new this.recordClass({});
+      if (!isSubset(integrationParams, defaultRecord)) {
         return Promise.reject(
           `${this.name}: Integration parameters for "${actionName}" must be ` +
           `a subset of this.record`
