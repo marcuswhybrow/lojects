@@ -31,6 +31,9 @@ export default class Manager {
         `action`
       );
     }
+    const getIntegrationData = () => {
+      return this.actions[actionName].request(actionParams);
+    }
     const callIntegration = integrationParams => {
       // Enforces data integrity
       if (!isSubset(integrationParams, this.record)) {
@@ -44,9 +47,6 @@ export default class Manager {
         integrationParams,
         this.integration.context
       );
-    }
-    const getIntegrationData = () => {
-      return this.actions[actionName].request(actionParams);
     }
     const parseIntegrationData = data => {
       return this.actions[actionName].response(data);
