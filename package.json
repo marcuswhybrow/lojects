@@ -27,10 +27,7 @@
       "stage-0"
     ]
   },
-  "dependencies": {
-    "aws-sdk": "^2.6.9",
-    "dynamodb-data-types": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.16.0",
